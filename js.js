@@ -16,8 +16,14 @@ const closemodal = (e) =>{
     }
 }
 
+
+
 theme.addEventListener("click",openmodal);
 modal.addEventListener("click",closemodal);
+
+
+
+    
 
 const removeSizeSelector = () =>{
     font.forEach(size => {
@@ -31,15 +37,16 @@ font.forEach(size =>{
         size.classList.toggle("active");
         if(size.classList.contains("font-size-1")){
             fontSize = '12px';
+            
         }
         else if(size.classList.contains("font-size-2")){
-            fontSize = '14px';
+            fontSize = '20px';
         }
         else if(size.classList.contains("font-size-3")){
-            fontSize = '16px';
+            fontSize = '25px';
         }
         else if(size.classList.contains("font-size-4")){
-            fontSize = '18px';
+            fontSize = '30px';
         }
     
         document.querySelector("html").style.fontSize = fontSize;
@@ -152,3 +159,14 @@ $(document).ready(function(){
         }
     });
 });
+ScrollReveal({ 
+    // reset: true,
+    distance: '100px',
+    duration: 5000,
+    delay: 100
+});
+
+ScrollReveal().reveal('.home-content, .title', { origin: 'top' });
+ScrollReveal().reveal('.apic,.card,.animate-content,.container2, .row, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });

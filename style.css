@@ -4,12 +4,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: 0;
     text-decoration: none;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 body{
     
     color: var(--color-dark);
@@ -36,20 +34,11 @@ a{
     --small-font-size:13px;
 
 }
- h1{
-    font-size:  var(--h1-font-size);
-    text-align: center;
-    margin:50px;
-    font-family: var(--body-font);
+html{
+    scroll-behavior: smooth;
+    font-size: var( --normal-font-size);
 }
-h2{
-    font-size:  var(--h2-font-size);
-    text-decoration: underline;
-
-}
-h3{
-    font-size:  var(--h3-font-size);
-}
+ 
 
 
 /* custom scroll bar */
@@ -76,7 +65,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, #project, .contact, footer{
+.about, .services, .skills, #project, .contact, .footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -91,7 +80,6 @@ section{
 section .title{
     position: relative;
     text-align: center;
-    
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
@@ -160,7 +148,7 @@ section .title::after{
 .navbar .menu li a{
     display: block;
     color: #fff;
-    font-size: var(--normal-font-size);
+    
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
@@ -221,46 +209,63 @@ section .title::after{
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
+    display: flex;
+
 }
-.home .max-width{
+.home .max-width,h1{
   width: 100%;
   display: flex;
+  margin-left: 13px;
+
 }
-.home .max-width .row{
-  margin-right: 0;
+
+
+.home-a{
+    width: 80%;
 }
-.home .home-content .text-1{
-    font-size: 27px;
-}
-.home .home-content .text-2{
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
-}
-.home .home-content .text-3{
-    font-size: 40px;
-    margin: 5px 0;
-}
-.home .home-content .text-3 span{
+.home .home-content  .home-a span{
     color: var(--color-primary);
     font-weight: 500;
+    font-size: 35px;
+    margin: 7px;
 }
-.home .home-content a{
+.home .home-content .home-a p{
+    margin: 7px;
+}
+.home .home-content .home-a a{
     display: inline-block;
     background: var(--color-primary);
     color: #fff;
-    font-size: 25px;
+    
     padding: 12px 36px;
+    
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
     border: 2px solid var(--color-primary)s;
     transition: all 0.3s ease;
 }
-.home .home-content a:hover{
+.home .home-content .home-a a:hover{
     color: crimson;
     background: none;
 }
+.apic{
+    border: 10px solid var(--color-primary);
+    border-radius: 50%;
+    animation: floatImage 4s ease-in-out infinite;
+    }
+    @keyframes floatImage {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-2.4rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
 
 /* about section styling */
 .about .title::after{
@@ -299,6 +304,10 @@ section .title::after{
 .about .about-content .right a:hover{
     color: crimson;
     background: none;
+}
+.pic{
+    border: 5px solid var(--color-primary);
+    border-radius: 10%;
 }
 
 /* services section styling */
@@ -356,7 +365,7 @@ section .title::after{
     width: calc(50% - 30px);
 }
 .skills .skills-content .left .text{
-    font-size: 20px;
+    
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -367,7 +376,7 @@ section .title::after{
     display: inline-block;
     background: var(--color-primary);;
     color: #fff;
-    font-size: 18px;
+    
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
@@ -475,7 +484,7 @@ section .title::after{
     border-top-color: var(--color-primary);;
     top:-10px;
     right:0;
-    animation: showtext .5s 1.5s linear forwards;
+    animation: showtext .2s 1.5s linear forwards;
     opacity: 0;
 }
 @keyframes showtext {
@@ -828,7 +837,7 @@ footer span a:hover{
 
 
 .customise-theme .font-size  {
-    margin-top: 6px;
+    margin: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -905,6 +914,35 @@ footer span a:hover{
   .customise-theme .chose-color span.color-3-active{
     border: 5px solid rgb(137, 172, 80);
   }
+  @keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-top {
+    animation: slideInTop 1s ease-in-out forwards;
+}
+
+.animate-bottom {
+    animation: slideInBottom 1s ease-in-out forwards;
+}
 
   
 
