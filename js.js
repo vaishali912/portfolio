@@ -163,7 +163,7 @@ ScrollReveal({
     // reset: true,
     distance: '100px',
     duration: 5000,
-    delay: 100
+    delay: 150
 });
 
 ScrollReveal().reveal('.home-content, .title', { origin: 'top' });
