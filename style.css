@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-
+what i know
 *{
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ html{
     scroll-behavior: smooth;
     font-size: var( --normal-font-size);
 }
- 
+ .scroll-up-btn
 
 
 /* custom scroll bar */
@@ -204,6 +204,7 @@ section .title::after{
     display: flex;
     background: url("./images/back.png") no-repeat center;
     height: 100vh;
+    width: 100%;
     color:#fff;
     min-height: 500px;
     background-size: cover;
@@ -253,6 +254,8 @@ section .title::after{
     border: 10px solid var(--color-primary);
     border-radius: 50%;
     animation: floatImage 4s ease-in-out infinite;
+    width:40%;
+    height: 10%;
     }
     @keyframes floatImage {
         0% {
@@ -548,7 +551,7 @@ section .title::after{
     flex-direction: column;;align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 40px;
+  
     transition: height .5s;
     color: white;
 }
@@ -694,6 +697,7 @@ footer span a:hover{
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
+        flex-direction: column;
     }
 }
 @media (max-width: 947px){
